@@ -1,7 +1,7 @@
 name: ShellCommands
 
 on: [push]
-on
+
 jobs:
   run-shell-commands:
     run-on: ubuntu-latest
