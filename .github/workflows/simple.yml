@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: echo a string
         run: echo "Hello"
+      - name: hostname
+        run: hostname
       - name: multiline script
         run: |
           node - v
