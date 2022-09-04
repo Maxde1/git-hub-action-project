@@ -12,4 +12,4 @@ jobs:
           with:
             who-to-greet: Hi, how a u?
         - name: Log greeting time
-            run: echo "${{steps.greet.outputs.time}}"
+          run: echo "${{steps.greet.outputs.time}}"
