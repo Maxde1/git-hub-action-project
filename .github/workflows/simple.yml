@@ -1,6 +1,8 @@
 name: ShellCommands
 
-on: [push]
+on:
+  pull-request: [close, reopened]
+
 
 jobs:
   run-shell-commands:
