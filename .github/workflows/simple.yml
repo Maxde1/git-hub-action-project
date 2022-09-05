@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-        run: echo "Hello2"
+        run: echo "Heljlo2"
       - name: hostname
         run: hostname
       - name: multiline script
