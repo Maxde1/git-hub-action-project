@@ -2,7 +2,7 @@ name: ShellCommands
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0/5 * * * *"
   pull_request:
     types:
       - closed
