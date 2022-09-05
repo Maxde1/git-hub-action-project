@@ -1,7 +1,7 @@
 name: ShellCommands
 
 on:
-  pull-request: [close, reopened]
+  pull-request: [closed, reopened]
 
 
 jobs:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-        run: echo "Hello"
+        run: echo "Hello2"
       - name: hostname
         run: hostname
       - name: multiline script
