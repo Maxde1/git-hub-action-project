@@ -1,8 +1,10 @@
 name: ShellCommands
 
 on:
-  pull-request:
-    types: [closed, reopened]
+  pull_request:
+    types:
+      - closed
+      - reopened
 
 
 jobs:
