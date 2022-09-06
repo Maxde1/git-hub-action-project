@@ -7,8 +7,9 @@ jobs:
       steps:
       - uses: actions/checkout@v1
       - name: Decrypt file
-        run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" \ --output $HOME/secret.txt decrypted_file.txt.gpg
+        run: gpg --quiet --batch --yes --decrypt --passphrase="$LARGE_SECRET_PASSPHRASE" \
+             --output $HOME/secrets/decrypted_file.txt decrypted_file.txt.gpg
         env:
           PASSPHRASE: ${{ secrets.DECRYPT_PASSWORD }}
       - name: Print decrypted_file
-        run: cat $HOME/secret.txt
+        run: cat $HOME/secrets/decrypted_file.txt
