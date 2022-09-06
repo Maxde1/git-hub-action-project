@@ -1,0 +1,4 @@
+name: Encrypt and decrypt file
+on: push
+
+jobs:
