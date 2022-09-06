@@ -6,7 +6,6 @@ jobs:
     run-github-actions:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v1
         - name: java-script
           id: greet
           uses: actions/hello-world-javascript-action@v1
