@@ -2,13 +2,13 @@ name: Encrypt and decrypt file
 on: push
 
 jobs:
-  decrypt_file:
-    runs-on: ubuntu-latest
-    steps:
+  create_decrypted_file:
+      runs-on: ubuntu-latest
+      steps:
       - uses: actions/checkout@v1
       - name: Decrypt file
         run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" \ --output random.txt random.txt.gpg $HOME/secret.txt decrypted_file.txt.gpg
+        env:
+          PASSPHRASE: ${{ $secrets.DECRYPT_PASSWORD }}
       - name: Print decrypted_file
         run: cat $HOME/secret.txt
-      env:
-        PASSPHRASE: ${{ $secrets.DECRYPT_PASSWORD }}
