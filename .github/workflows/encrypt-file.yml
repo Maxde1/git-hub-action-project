@@ -6,8 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Decrypt file
-        run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" \
-                 --output random.txt random.txt.gpg $HOME/secret.txt decrypted_file.txt.gpg
+        run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" \ --output random.txt random.txt.gpg $HOME/secret.txt decrypted_file.txt.gpg
       - name: Print decrypted_file
         run: cat $HOME/secret.txt
       env:
