@@ -4,7 +4,6 @@ on: push
 
 jobs:
   setup_node:
-    name: change node version
     runs-on: ubuntu-latest
     example_matrix:
         strategy:
@@ -14,6 +13,7 @@ jobs:
       - name: Log node version
         run: node -v
       - uses: actions/setup-node@v3
+        with: $example_matrix.matrix.node_version
       - name : Log node version
         run: node -v
 
