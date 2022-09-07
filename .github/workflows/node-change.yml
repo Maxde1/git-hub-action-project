@@ -1,0 +1,19 @@
+name: Node change version
+
+on: push
+
+jobs:
+  setup_node:
+    name: change node version
+    runs-on: ubuntu-latest
+    example_matrix:
+        strategy:
+          matrix:
+            node_version: [6, 7, 8]
+    steps:
+      name: Log node version
+      run: node -v
+      - uses: actions/setup-node@v3
+      name : Log node version
+      run: node -v
+
