@@ -5,10 +5,9 @@ on: push
 jobs:
   setup_node:
     runs-on: ubuntu-latest
-    example_matrix:
-        strategy:
-          matrix:
-            node_version: [6, 7, 8]
+      strategy:
+        matrix:
+          node_version: [6, 7, 8]
     steps:
       - name: Log node version
         run: node -v
