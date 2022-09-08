@@ -4,10 +4,11 @@ on: [push, workflow_dispatch]
 
 jobs:
   setup_node:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
         node_version: [6, 7, 8]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Log node version
         run: node -v
