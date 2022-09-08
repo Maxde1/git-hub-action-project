@@ -1,6 +1,6 @@
 name: Node change version
 
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   setup_node:
@@ -13,7 +13,7 @@ jobs:
         run: node -v
       - uses: actions/setup-node@v3
         with:
-          node_version: ${{ matrix.node_version }}
+          node-version: ${{ matrix.node_version }}
       - name : Log node version
         run: node -v
 
