@@ -11,14 +11,14 @@ jobs:
         exclude:
         - os: macos-latest
           node_version: 16
-  runs-on: ${matrix.os}
-  steps:
-    - name: Log node version
-      run: node -v
-    - uses: actions/setup-node@v3
-      with:
-        node-version: ${node.version}
-    - name: Log node version
-      run: node -v
-    - name: Log os version
-      run: echo "This os is ${matrix.os}"
+    runs-on: ${matrix.os}
+    steps:
+      - name: Log node version
+        run: node -v
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${node.version}
+      - name: Log node version
+        run: node -v
+      - name: Log os version
+        run: echo "This os is ${matrix.os}"
