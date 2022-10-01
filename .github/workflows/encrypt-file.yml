@@ -1,5 +1,5 @@
 name: Encrypt and decrypt file
-on: push
+on: workflow_dispatch
 
 jobs:
   create_decrypted_file:
