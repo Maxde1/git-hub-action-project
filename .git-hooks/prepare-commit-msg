@@ -1,3 +1,4 @@
+#!/bin/bash
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 MESSAGE=$(cat $1)
 COMMIT-FORMAT="^($BRANCH):\s\w+"
