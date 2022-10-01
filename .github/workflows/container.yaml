@@ -25,13 +25,13 @@ jobs:
         ports:
           - "27017:27017"
     steps:
-      - name: Post a user
-        run: 'curl -X POST \
-                http://localhost:3001/api/user \
-                -H ''Content-Type: application/json'' \
-                -d ''{
-              	"username": "hello2222",
-              	"address": "dwded"
-              	}'''
+#       - name: Post a user
+#         run: 'curl -X POST \
+#                 http://localhost:3001/api/user \
+#                 -H ''Content-Type: application/json'' \
+#                 -d ''{
+#               	"username": "hello2222",
+#               	"address": "dwded"
+#               	}'''
       - name: Get user
         run: curl http://localhost:3001/api/user
