@@ -1,0 +1,14 @@
+name: Container
+
+on: workflow_dispatch
+
+jobs:
+  docker-container:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14-alpine3.15
+    steps:
+      - name: Log container version
+        run: |
+          node -v
+          cat /etc/os-release
